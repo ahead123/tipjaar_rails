@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="page-header well col-md-10 col-md-offset-1 text-center"><h1 class="text-primary">Create a new tipper account!</h1></div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4 well text-center">
+      <%= simple_form_for @tipper do |f| %>
+
+        <%= f.input :name, placeholder: 'Enter name', input_html: { class: 'form-control'} %><br />
+        <%= f.input :email, placeholder: 'Enter email', input_html: { class: 'form-control'} %><br />
+        <%= f.input :password, placeholder: 'Password', input_html: { class: 'form-control'} %><br />
+        <%= f.input :password_confirmation, placeholder: 'Re-type password', input_html: { class: 'form-control text'} %></br>
+      	<%= f.button :submit, class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

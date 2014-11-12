@@ -1,0 +1,2 @@
+module TipperHelper
+end

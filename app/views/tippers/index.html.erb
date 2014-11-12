@@ -1,0 +1,20 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="page-header well text-center col-md-10 col-md-offset-1"><h1>All Tippers</h1></div>
+	</div>
+
+	<div class="row">
+			<div class="col-md-4 col-md-offset-4 well text-center">
+				<% @tippers.each do |tipper| %>
+					<h2><%= tipper.name %></h2>
+					<p><%= link_to 'Edit', edit_tipper_path(tipper) %></p>
+					<p><%= link_to 'Delete', tipper, method: :delete, data: {confirm: "Are you sure?"} %></p>
+				<% end %>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4 well text-center">
+				<h3>Create a <%= link_to 'New', new_tipper_path %> Tipper profile!</h3>
+			</div>
+		</div>
+</div>
